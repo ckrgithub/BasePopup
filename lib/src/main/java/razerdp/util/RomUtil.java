@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
 /**
  * 该文件来源：https://www.jianshu.com/p/ba9347a5a05a
  * <p>
- * 用于判断蛋疼的系统
+ * todo 用于判断蛋疼的系统
  */
 
 public class RomUtil {

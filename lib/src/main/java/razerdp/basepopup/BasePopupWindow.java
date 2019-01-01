@@ -915,7 +915,7 @@ public abstract class BasePopupWindow implements BasePopup, PopupWindow.OnDismis
     }
 
     /**
-     * 用于修复popup无法在onCreate里面show的问题
+     * todo 用于修复popup无法在onCreate里面show的问题
      */
     private void retryToShowPopup(final View v, final boolean positionMode, final boolean abortAnimate) {
         if (retryCounter > MAX_RETRY_SHOW_TIME) return;
@@ -1874,14 +1874,15 @@ public abstract class BasePopupWindow implements BasePopup, PopupWindow.OnDismis
     }
 
     /**
-     * 捕捉返回键事件
+     * todo 捕捉返回键事件
      *
      * @return true意味着你已经处理消耗了事件，后续不再传递
      */
     @Override
     public boolean onBackPressed() {
+        Log.d(TAG, "onBackPressed: "+mHelper.isBackPressEnable());
         if (mHelper.isBackPressEnable()) {
-            dismiss();
+//            dismiss();
             return true;
         }
         return false;
@@ -2204,7 +2205,7 @@ public abstract class BasePopupWindow implements BasePopup, PopupWindow.OnDismis
             int windowHeight = mTarget.getHeight();
             int keyboardHeight = windowHeight - displayHeight;
             if (preKeyboardHeight != keyboardHeight) {
-                //判定可见区域与原来的window区域占比是否小于0.75,小于意味着键盘弹出来了。
+                //todo 判定可见区域与原来的window区域占比是否小于0.75,小于意味着键盘弹出来了。
                 boolean isVisible = (displayHeight * 1.0f / windowHeight * 1.0f) < 0.75f;
                 if (isVisible != preVisible) {
                     if (mListener != null) {

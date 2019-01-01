@@ -4,7 +4,7 @@ import android.view.animation.LinearInterpolator;
 
 /**
  * Created by 大灯泡 on 2016/1/28.
- * The expression comes from web:
+ * todo The expression comes from web:
  * http://inloop.github.io/
  */
 public class AnticipateInterpolator extends LinearInterpolator {
